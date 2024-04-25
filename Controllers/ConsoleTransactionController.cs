@@ -93,7 +93,7 @@ namespace TransactionManager
                     return;
 
                 CultureInfo ruRu = new CultureInfo("ru-RU");
-                if (DateTime.TryParseExact(input, "dd.MM.yyyy", ruRu, DateTimeStyles.None, out DateTime result))
+                if (DateTime.TryParse(input, ruRu, DateTimeStyles.None, out DateTime result))
                 {
                     candidate.TransactionDate = result;
                     break;
