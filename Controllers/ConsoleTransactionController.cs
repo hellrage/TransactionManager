@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace TransactionManager
 {
@@ -99,7 +96,7 @@ namespace TransactionManager
                     break;
                 }
                 else
-                    Console.WriteLine($"Неправильный формат даты, ожидается: dd.MM.yyyy");
+                    Console.WriteLine($"Неправильный формат даты, ожидается: dd.MM.yyyy[ hh:mm:ss]");
             }
 
             while (true)

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Text.Json;
 
 namespace TransactionManager
 {
@@ -19,6 +17,7 @@ namespace TransactionManager
                     knownCommands[kvp.Key] = kvp.Value;
                 }
             }
+            knownCommands["exit"] = () => { /*Possibly resource cleanup*/ return; } ;
         }
 
         public void Run()
@@ -27,11 +26,14 @@ namespace TransactionManager
             {
                 Console.Write("Введите команду>");
                 string command = Console.ReadLine().ToLower();
-                if (command == "exit") break;
 
                 Action procedure;
                 if (knownCommands.TryGetValue(command, out procedure))
+                {
                     procedure();
+                    if (command == "exit")
+                        break;
+                }
                 else
                 {
                     Console.WriteLine($"Неизвестная команда, допустимые команды: {string.Join(", ", knownCommands.Keys)}");

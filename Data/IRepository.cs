@@ -3,7 +3,7 @@
     public interface IRepository<T>
     {
         /// <summary>
-        /// Adds the given entity to storage, overwriting in case of Id conflict.
+        /// Adds the given entity to storage, overwriting in case of id conflict.
         /// </summary>
         /// <param name="entity">Entity instance to save.</param>
         public void Add(T entity);

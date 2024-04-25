@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace TransactionManager
+﻿namespace TransactionManager
 {
     
     public class TransactionController
