@@ -21,7 +21,7 @@
         {
             if (transaction == null) return;
 
-            _storage.Add(transaction);
+            _storage.Add(transaction, transaction.Id);
         }
 
         public bool TransactionExists(int id)

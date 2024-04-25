@@ -6,7 +6,8 @@
         /// Adds the given entity to storage, overwriting in case of id conflict.
         /// </summary>
         /// <param name="entity">Entity instance to save.</param>
-        public void Add(T entity);
+        /// <param name="id">Id to use when saving the entity.</param>
+        public void Add(T entity, int id);
 
         /// <summary>
         /// Fetch the entity with the given id, if it exists.

@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            TransactionMemoryStorage storage = new TransactionMemoryStorage();
-            ConsoleTransactionController controller = new ConsoleTransactionController(storage);
+            MemoryStorage<Transaction> transactionStorage = new MemoryStorage<Transaction>();
+            ConsoleTransactionController controller = new ConsoleTransactionController(transactionStorage);
             REPLConsole terminal = new REPLConsole(controller);
             terminal.Run();
         }

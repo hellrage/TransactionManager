@@ -5,25 +5,25 @@ namespace TransactionManager
     /// <summary>
     /// Volatile storage for keeping entities in-memory.
     /// </summary>
-    public class TransactionMemoryStorage : IRepository<Transaction>
+    public class MemoryStorage<T> : IRepository<T>
     {
-        private Dictionary<int, Transaction> storage;
+        private Dictionary<int, T> storage;
 
-        public TransactionMemoryStorage()
+        public MemoryStorage()
         {
-            storage = new Dictionary<int, Transaction>();
+            storage = new Dictionary<int, T>();
         }
 
-        public void Add(Transaction entity)
+        public void Add(T entity, int id)
         {
             if (entity == null) return;
 
-            storage[entity.Id] = entity;
+            storage[id] = entity;
         }
 
-        public Transaction Get(int id)
+        public T Get(int id)
         {
-            Transaction value;
+            T value;
             storage.TryGetValue(id, out value);
 
             return value;
