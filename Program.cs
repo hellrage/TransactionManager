@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             TransactionMemoryStorage storage = new TransactionMemoryStorage();
-            TransactionController controller = new TransactionController(storage);
+            ConsoleTransactionController controller = new ConsoleTransactionController(storage);
             REPLConsole terminal = new REPLConsole(controller);
             terminal.Run();
         }
