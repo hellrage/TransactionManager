@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace TransactionManager
 {
+    /// <summary>
+    /// Read-Eval-Print-Loop console for user interaction. Gives control over to other controllers when
+    /// a matching command is entered by the user.
+    /// </summary>
     public class REPLConsole
     {
         private Dictionary<string, Action> knownCommands = new Dictionary<string, Action>();

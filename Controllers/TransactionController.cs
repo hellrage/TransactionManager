@@ -1,6 +1,8 @@
 ﻿namespace TransactionManager
 {
-    
+    /// <summary>
+    /// Handles Transaction entities wrt storage/retrieval
+    /// </summary>
     public class TransactionController
     {
         private readonly IRepository<Transaction> _storage;

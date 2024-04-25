@@ -116,6 +116,7 @@ namespace TransactionManager
                     Console.WriteLine($"Неправильный формат суммы, ожидается: [-]x[.x]");
             }
 
+            // [TODO] Additional validation for actual values (min-max amount, date, etc)?
             this.AddTransaction(candidate);
             Console.WriteLine("[OK]");
         }
