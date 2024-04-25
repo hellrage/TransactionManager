@@ -13,7 +13,7 @@ namespace TransactionManager
             {
                 foreach (var kvp in c.GetConsoleCommands())
                 {
-                    // [TODO] No conflict resolution, out of scope for this excercise
+                    // [TODO] No conflict resolution, out of scope for this exercise
                     knownCommands[kvp.Key] = kvp.Value;
                 }
             }

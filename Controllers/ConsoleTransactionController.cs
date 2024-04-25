@@ -73,7 +73,7 @@ namespace TransactionManager
                 if (this.TransactionExists(result))
                 {
                     Console.Write($"Id {result} уже занят. Продолжить и перезаписать транзакцию с этим Id? y/n: ");
-                    if (Console.ReadLine().ToLower() == "n")
+                    if (Console.ReadLine().ToLower() != "y")
                         continue;
                 }
 
