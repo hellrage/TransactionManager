@@ -12,8 +12,8 @@ namespace TransactionManager
         public ConsoleTransactionController(IRepository<Transaction> storage) : base(storage)
         {
             Commands = new Dictionary<string, Action>();
-            Commands.Add("get", () => this.GetTransaction());
-            Commands.Add("add", () => this.AddTransaction());
+            Commands.Add("get", () => this.ConsoleGetTransaction());
+            Commands.Add("add", () => this.ConsoleAddTransaction());
         }
 
         public Dictionary<string, Action> GetConsoleCommands()
@@ -21,7 +21,7 @@ namespace TransactionManager
             return Commands;
         }
 
-        private void GetTransaction()
+        private void ConsoleGetTransaction()
         {
             while (true)
             {
@@ -52,7 +52,7 @@ namespace TransactionManager
             }
         }
 
-        private void AddTransaction()
+        private void ConsoleAddTransaction()
         {
             Transaction candidate = new Transaction();
 
